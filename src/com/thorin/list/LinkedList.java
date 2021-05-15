@@ -74,7 +74,7 @@ public class LinkedList<E> {
     }
 
     public E set(int index,E element){
-        if (index > size || index < 0) {
+        if (!(index < size && index >= 0)) {
             throw new IndexOutOfBoundsException("Index : " + index + ",size : " + size);
         }
         Node<E> f = first;

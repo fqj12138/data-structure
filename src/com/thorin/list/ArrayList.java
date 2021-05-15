@@ -82,7 +82,7 @@ public class ArrayList<E> {
     }
 
     private void rangeCheck(int index){
-        if (index > size || index < 0) {
+        if ((index < size && index >= 0)) {
             throw new IndexOutOfBoundsException("Index : " + index + ",size : " + size);
         }
     }
