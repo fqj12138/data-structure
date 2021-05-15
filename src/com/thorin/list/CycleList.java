@@ -117,4 +117,19 @@ public class CycleList<E> {
         }
     }
 
+    // Merge two circular linked list
+    public CycleList<E> merge(CycleList<E> first,CycleList<E> second){
+        Node<E> firstF = first.last.next;
+        Node<E> firstL = first.last;
+        Node<E> secondL = second.last;
+        Node<E> secondF = second.last.next;
+
+        firstL.next = secondF;
+        secondL.next = firstF;
+        CycleList<E> cycleList = new CycleList<>();
+        cycleList.last = first.last;
+        cycleList.size = first.size + second.size;
+        return cycleList;
+    }
+
 }
