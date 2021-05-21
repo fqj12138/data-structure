@@ -37,21 +37,21 @@ public class BinaryTree<E> {
     // Middle order traversal
     public void middle(Node<E> root){
         if (root.left != null) {
-            before(root.left);
+            middle(root.left);
         }
         System.out.println(root.item);
         if (root.right != null) {
-            before(root.right);
+            middle(root.right);
         }
     }
 
     // Postorder traversal
     public void after(Node<E> root){
         if (root.left != null) {
-            before(root.left);
+            after(root.left);
         }
         if (root.right != null) {
-            before(root.right);
+            after(root.right);
         }
         System.out.println(root.item);
     }
