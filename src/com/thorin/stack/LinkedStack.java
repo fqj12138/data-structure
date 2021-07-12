@@ -48,7 +48,7 @@ public class LinkedStack<E> {
         return element;
     }
 
-    // Replaces the at the specified position in this list with the specified element.
+    // Replaces the element at the specified position in this list with the specified element.
     public E set(int index,E e){
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index : " + index + ",size : " + size);
